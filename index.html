@@ -1,4 +1,6 @@
 <!--Google homepage project by ouanling-->
+<!DOCTYPE html>
+<html>
 <style>
     #topbox {
         display: flex;
@@ -15,7 +17,36 @@
     #personal {}
     .main {
     background-color: #FFFFFF;
+    } 
+ 
+    .googlelogo {
+        justify-self: center;
+        grid-area: googlelogo;
     }
+    .searchbox {
+        justify-self: center;
+        grid-area: searchbox;
+    }
+    .submit {
+        justify-self: right;
+        grid-area: submit;
+    }
+    .lucky {
+        justify-self: left;
+        grid-area: lucky;
+    }
+    .container {
+        display: grid;
+        width: 100%;
+        grid-template-rows: 2fr 200px 1fr;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: 
+            "googlelogo googlelogo"
+            "searchbox searchbox"
+            "submit lucky";
+    }
+   
+
 </style>
 <header>
     <title> Google</title>
@@ -28,7 +59,26 @@
 
 </header>
 
-<body></body>
+<body>
+    <div class="container">
+    <div class="googlelogo">
+        <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo">
+    </div>
+    
+    <div class="searchbox">
+            <input type="text" >
+    </div>
+
+    <div class="submit">
+            <button type="submit">Google Search</button>
+    </div>
+
+    <div class="lucky">
+            <button type="submit">Im Feeling Lucky</button>
+</div>
+</div>
+</body>
 <footer>
 
 </footer>
+</html>
