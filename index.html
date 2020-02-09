@@ -4,41 +4,114 @@
 <style>
     #topbox {
         display: flex;
-        height: 60px;
+        height: 40px;
+        float: right;
+align-items: center;
         background-color: #ffffff;
     }
     #gmail {
         color: rgba(0, 0, 0, 0.87);
+        font-size: 13px;
+
     }
     #images {
         color: rgba(0, 0, 0, 0.87);
+        padding: 5px;
+        
+        font-size: 13px;
         }
-    #squarebox {}
-    #personal {}
+    #square_box {
+       object-fit: contain;
+       padding: 5px;
+    }
+    #personal {
+        object-fit: contain;
+        padding: 5px;
+        margin: 5px;
+
+    }
+#personal img[src="photo.png"] {
+    border-radius: 50%;
+    height: 35px;
+ 
+    }
+    #square_box img[src="grid.png"] {
+  
+    }
+    ul {
+        list-style-type: none;
+
+    }
+    li {
+        display: inline;
+
+    }
     .main {
     background-color: #FFFFFF;
     } 
- 
+
     .googlelogo {
         justify-self: center;
         grid-area: googlelogo;
+        margin-top: 50px;
+    }
+
+    input {
+        height: 30px;
+        padding: 0px;
+        border-width: 1px 0px 1px 0px;
+        margin-top: 10px;
+        border-radius: 25px;
+        border: 1px solid #dfe1e5;
+       
     }
     .searchbox {
         justify-self: center;
         grid-area: searchbox;
     }
-    .submit {
+    input:hover {
+        box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
+        background: #ffffff;
+        border: 1px solid #dfe1e5;
+        color: #222;
+    }
+
+     .envoye {
         justify-self: right;
         grid-area: submit;
+        margin: 10px;
+    
     }
+    button {
+        background: #f2f2f2;
+    border: 1px solid #f2f2f2;
+    border-radius: 2px;
+    color: #292828c0;
+    cursor: default;
+    font-size: 14px;
+    width: 140px;
+    padding: 0 16px;
+    height:36px; }
+   
+button:hover {
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    background: #f8f8f8;
+    border: 1px solid #c6c6c6;
+    color: #222;
+}
+
+
+
+
     .lucky {
         justify-self: left;
         grid-area: lucky;
+        margin: 10px;
     }
     .container {
         display: grid;
         width: 100%;
-        grid-template-rows: 2fr 200px 1fr;
+        grid-template-rows: 2fr 50px 1fr;
         grid-template-columns: 50% 50%;
         grid-template-areas: 
             "googlelogo googlelogo"
@@ -51,11 +124,14 @@
 <header>
     <title> Google</title>
 <div id="topbox">
-        <div id="gmail">Gmail</div>
-        <div id="images">Images</div>
-        <div id="square box"></div>
-        <div id="personal"></div>
+    <ul>
+        <li>  <a href="gmail" id="gmail">Gmail</a></li>
+        <li> <a href="image" id="images">Images</a></li>
+        <li> <a href="3petitpoints" id="square_box" ><img src="grid.png"></a></li>
+        <li> <a href="icon" id="personal"><img src="photo.png"> </a></li>
+        </ul>
 </div>
+
 
 </header>
 
@@ -64,12 +140,12 @@
     <div class="googlelogo">
         <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo">
     </div>
-    
+
     <div class="searchbox">
-            <input type="text" >
+            <input type="text" size="50" >
     </div>
 
-    <div class="submit">
+    <div class="envoye">
             <button type="submit">Google Search</button>
     </div>
 
