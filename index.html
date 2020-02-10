@@ -6,29 +6,45 @@
         display: flex;
         height: 40px;
         float: right;
+        justify-content: space-evenly;
 align-items: center;
         background-color: #ffffff;
     }
     #gmail {
         color: rgba(0, 0, 0, 0.87);
         font-size: 13px;
+        text-decoration: none;
 
+    }
+    #gmail:hover {
+        text-decoration: underline;
     }
     #images {
         color: rgba(0, 0, 0, 0.87);
         padding: 5px;
-        
+        text-decoration: none;
         font-size: 13px;
+        }
+        #images:hover {
+            text-decoration: underline;
         }
     #square_box {
        object-fit: contain;
        padding: 5px;
+    }
+       #square_box:hover {
+       
+filter: blur(1px);
+       
     }
     #personal {
         object-fit: contain;
         padding: 5px;
         margin: 5px;
 
+    }
+    #personal:hover {
+        filter: grayscale(80%);
     }
 #personal img[src="photo.png"] {
     border-radius: 50%;
