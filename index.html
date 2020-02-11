@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html>
 <style>
+    html { font-family: arial, sans-serif;}
     #topbox {
         display: flex;
         height: 40px;
@@ -79,17 +80,21 @@ filter: blur(1px);
         margin-top: 10px;
         border-radius: 25px;
         border: 1px solid #dfe1e5;
+        background: url(microphone.png) no-repeat right 10px center;
        
     }
+
     .searchbox {
         justify-self: center;
         grid-area: searchbox;
+        
     }
     input:hover {
         box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
         background: #ffffff;
         border: 1px solid #dfe1e5;
         color: #222;
+        background: url(microphone.png) no-repeat right 10px center;
     }
 
      .envoye {
@@ -134,7 +139,54 @@ button:hover {
             "searchbox searchbox"
             "submit lucky";
     }
-   
+
+   .bottombar {
+       right: 0px;
+     border: 1px solid rgba(185, 185, 185, 0.54);
+       left: 0px;
+    display: flex;
+        flex-direction: row;
+       height: 50px;
+       width: 100%;
+
+       flex-wrap: wrap;
+       background-color: #f2f2f2;
+       position: fixed;
+       bottom: 0;
+ 
+       font-size: 10px;
+       font-family: arial, sans-serif;
+       color: rgba(0,0,0,.54);
+      
+   }
+   .ligne1 { 
+       
+       flex-basis: 100%;
+       margin-left: 30px;
+       padding-top: 5px;
+       padding-bottom: 3px;
+
+   }
+   .gauche {
+
+ 
+       flex-basis: 50%;
+       display: inline-flex;
+       border-top: 1px solid rgba(185, 185, 185, 0.54);
+       padding-top: 5px;
+   }
+   #gauche1, #gauche2, #gauche3 {
+       margin-left: 30px;
+   }
+   .droite {
+  flex-basis: 50%;
+  display: inline-flex;
+  justify-content: end;
+    border-top: 1px solid rgba(185, 185, 185, 0.54);
+    padding-top: 5px;
+   }
+   #droite1, #droite2, #droite3 {margin-right: 30px;}
+
 
 </style>
 <header>
@@ -171,6 +223,18 @@ button:hover {
 </div>
 </body>
 <footer>
-
+<div class="bottombar">
+    <div class="ligne1"> Thailand</div>
+    <div class="gauche">
+    <div id="gauche1"> Advertising</div>
+    <div id="gauche2"> Business</div>
+    <div id="gauche3"> About</div>
+    </div>
+    <div class="droite">
+    <div id="droite1"> Privacy</div>
+    <div id="droite2"> Terms</div>
+    <div id="droite3"> Settings</div>
+    </div>
+</div>
 </footer>
 </html>
